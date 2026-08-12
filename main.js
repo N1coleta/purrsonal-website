@@ -18,6 +18,7 @@ class pair{
     }
 }
 
+const catImg=document.getElementById("catimage");
 const recta =document.getElementById("rec");
 const boopAr = new rec();
 boopAr.constructor2(recta.getBoundingClientRect());
@@ -30,6 +31,8 @@ let nrRows=6;
 let nrCollums=6;
 const myRec = new InsideRec(0, 0, 0, 0);
 const grid=myRec.matrix();
+
+let imgActive=1;//the index of the image that is currently being displayed on the screen
 
 
 
@@ -113,7 +116,7 @@ function resizeRec(){
     }
 }
 function findGridPos(x,y){
-    return new pair(Math.round(x / sizeRow), Math.round(y / sizeCollum));
+    return new pair(Math.round(y / sizeCollum),Math.round(x / sizeRow));
 }
 
 
@@ -131,6 +134,46 @@ function setUpImg(){
         let endSquare=findGridPos(catsNose[i].x2,catsNose[i].y2);
         addImg(startSquare.s,endSquare.s,startSquare.f,endSquare.f,i);
     }
+    console.log("variables that have a square in them")
+    for(let i=0;i<nrRows;++i){
+        for(let j=0;j<nrCollums;++j){
+            if(grid[i][j].images.length>0){
+                console.log(i+" "+j);
+            }
+        }
+    }
+}
+function getCatImage(idx){
+    return `catPictures/cat${idx}.jpg`;
+}
+function changeCatImage(idx){
+    console.log(idx);       
+    catImg.src = getCatImage(idx);
+    console.log(getCatImage(idx));
+}
+
+function getRandomNumber(maxVal){
+    return Math.floor(Math.random() * maxVal); 
+}
+function getOtherImgIdx(clicked){
+    let maxImg=grid[clicked.f][clicked.s].images.length;
+    if(maxImg==1){
+        console.log("ERR 1");
+        return -1;
+    }
+    if(maxImg==0){
+        console.log("ERR 0");
+        return -1;
+    }
+    else{
+        
+        let nr=getRandomNumber(maxImg); 
+        while(grid[clicked.f][clicked.s].images[nr]==imgActive){
+            console.log("miau");
+            nr=getRandomNumber(maxImg); //sper sa nu dea crash lol
+        }
+        return grid[clicked.f][clicked.s].images[nr];
+    }
 }
 
 document.addEventListener('click', function(e){
@@ -146,6 +189,11 @@ document.addEventListener('click', function(e){
         let poz=findGridPos(cursorX,cursorY);
         console.log(poz.f+" "+poz.s);
         console.log(nrCollums);
+        let newImg=getOtherImgIdx(poz);
+        if(newImg!=-1){
+            imgActive=newImg;
+            changeCatImage(newImg);
+        }
     }
 });
 resizeRec();
