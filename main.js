@@ -113,7 +113,7 @@ function resizeRec(){
     }
 }
 function findGridPos(x,y){
-    return new pair(Math.floor(x / sizeRow), Math.floor(y / sizeCollum));
+    return new pair(Math.round(x / sizeRow), Math.round(y / sizeCollum));
 }
 
 
