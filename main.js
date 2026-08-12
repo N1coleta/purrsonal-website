@@ -27,8 +27,8 @@ const height=boopAr.y2-boopAr.y1+1;
 let sizeCollum;
 let sizeRow;
 
-let nrRows=6;
-let nrCollums=6;
+let nrRows=12;
+let nrCollums=12;
 const myRec = new InsideRec(0, 0, 0, 0);
 const grid=myRec.matrix();
 
@@ -132,7 +132,7 @@ function setUpImg(){
     for(let i=0;i<nrCats;++i){
         let startSquare=findGridPos(catsNose[i].x1,catsNose[i].y1);
         let endSquare=findGridPos(catsNose[i].x2,catsNose[i].y2);
-        addImg(startSquare.s,endSquare.s,startSquare.f,endSquare.f,i);
+        addImg(startSquare.f, endSquare.f, startSquare.s, endSquare.s, i);
     }
     console.log("variables that have a square in them")
     for(let i=0;i<nrRows;++i){
@@ -157,7 +157,7 @@ function getRandomNumber(maxVal){
 }
 function getOtherImgIdx(clicked){
     let maxImg=grid[clicked.f][clicked.s].images.length;
-    if(maxImg==1){
+    if(maxImg==1 && grid[clicked.f][clicked.s].images[0]==imgActive){
         console.log("ERR 1");
         return -1;
     }

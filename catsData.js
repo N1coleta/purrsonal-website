@@ -34,9 +34,13 @@ export class rec {
     }
 }
 
-export const nrCats = 7;
-export const cats=[new rec(1600,1170),new rec(1500,1367),new rec(1587,1206),new rec(1600,1200),new rec(1500,867),new rec(1386,1104),new rec(1877,1326)] ;
-export const catsNose=[new rec(752,276,178,156),new rec(1019, 966,197,188),new rec(859, 524,163 ,193),new rec(628, 971,142,182),new rec(859, 228,183,215),new rec(671, 337,216,194),new rec(923, 423,214,202)] ;//astea sunt fata de sus
+export const nrCats = 9;
+export const cats=[new rec(1600,1170),new rec(1500,1367),new rec(1587,1206),new rec(1600,1200),new rec(1500,867),new rec(1386,1104),new rec(1877,1326)
+    ,new rec(1021,973),new rec(1023 ,761)
+] ;
+export const catsNose=[new rec(752,276,178,156),new rec(1019, 966,197,188),new rec(859, 524,163 ,193),new rec(628, 971,142,182),new rec(859, 228,183,215),new rec(671, 337,216,194),new rec(923, 423,214,202)
+    ,new rec(305, 490,156,190),new rec(249,0,198,160)
+] ;//astea sunt fata de sus
 export function modifySize(){
     for(let i=0; i<nrCats; ++i){
         let maxy = cats[i].y2;
