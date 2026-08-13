@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 html, body {
   height: 100%;
   width: 100%;
@@ -6,6 +6,17 @@ html, body {
   padding: 0;
   
 }
+.chango-regular {
+  font-family: "Chango", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+#catAsci{
+  color: aliceblue;
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 3.5vh;
+}
+
 .container {
     height: 100%;
     width: 100%;
@@ -14,17 +25,40 @@ html, body {
     align-items: center;
 }
 .rectangle {
+    transition: filter 0.3s ease;
+    cursor: pointer;
+
     margin: 0;
-    --bg-color:#6e4f4f;
-    width:35vw;
-    height: 35vh;
-    background-color: var(--bg-color);
+    
+    width:40vw;
+    height: 40vh;
+    transform: translateX(2vw);
 
     display: inline-block;
     justify-content: center;
     position: relative;
     overflow: hidden;
     align-items: center;
+}
+.text{
+    width:40vw;
+    height: 40vh;
+    transform: translateX(10vw);
+    transform: translateY(-7vw);
+
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    align-items: top;
+
+}
+#title{
+  font-family: "Chango", sans-serif;
+  color: #7b6fb4  ;
+}
+.rectangle:hover {
+  filter: drop-shadow(0 10px 22px rgba(186, 85, 211, 0.6)); /* Purple glow */
 }
 #gallery{
     
@@ -33,10 +67,16 @@ html, body {
     object-fit: fill;
     display: block;
 }
-.rectangle:hover {
-    filter: drop-shadow(10px 10px 20px rgba(36, 36, 36, 0.5));
+#info{
+  font-size: 3vh;
+  color:#b4befe
 }
+#pain{
+  color:#f38ba8
+}
+#opportunity{
 
+}
 /* --- TYPING CONTAINER --- stolen from the internet*/
 
 .typing-container {
@@ -48,7 +88,7 @@ html, body {
   margin: 0;
   color: white;
   font-family: monospace;
-  font-size: 1.8vw;
+  font-size: 2vw;
   text-align: center;
 }
 
@@ -57,7 +97,7 @@ html, body {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  border-right: .15em solid purple;
+  border-right: .15em solid #cba6f7;
 }
 
 .line-1 {

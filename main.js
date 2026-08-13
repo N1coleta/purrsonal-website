@@ -19,6 +19,9 @@ class pair{
 }
 
 const recta =document.getElementById("rec");
+const text1=document.getElementById("text1");
+const text2=document.getElementById("text2");
+
 const boopAr = new rec();
 boopAr.constructor2(recta.getBoundingClientRect());
 const width=boopAr.x2-boopAr.x1+1;
@@ -159,10 +162,16 @@ function getOtherImgIdx(clicked){
     return grid[clicked.f][clicked.s].images[nr];
 }
 
+function hideText(){
+    text1.style.display="none";
+    text2.style.display="none";
+}
+
 document.addEventListener('click', function(e){
     let cursorX = e.clientX;
     let cursorY = e.clientY;
     if(insideRectangle(cursorX,cursorY)){
+        hideText();
         playMeow(getRandomNumber(nrMeows-1));
         cursorX-=boopAr.x1;
         cursorY-=boopAr.y1;
