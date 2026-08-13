@@ -5,7 +5,7 @@ export async function loadCats() {
   const res = await fetch('cats.json');
   const data = await res.json();
   catPics = data.cats;
-  changeCatImage(0);
+  //changeCatImage(0);
 }
 
 export function getCatImage(idx) {

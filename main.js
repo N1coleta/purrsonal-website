@@ -163,7 +163,7 @@ document.addEventListener('click', function(e){
     let cursorX = e.clientX;
     let cursorY = e.clientY;
     if(insideRectangle(cursorX,cursorY)){
-        playMeow(getRandomNumber(nrMeows));
+        playMeow(getRandomNumber(nrMeows-1));
         cursorX-=boopAr.x1;
         cursorY-=boopAr.y1;
         let crt=getRandomColor();
