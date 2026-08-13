@@ -1,0 +1,344 @@
+{
+  "cats": [
+    {
+      "title": "cat0",
+      "image": "./catPictures/cat0.jpg"
+    },
+    {
+      "title": "cat1",
+      "image": "./catPictures/cat1.jpg"
+    },
+    {
+      "title": "cat2",
+      "image": "./catPictures/cat2.jpg"
+    },
+    {
+      "title": "cat3",
+      "image": "./catPictures/cat3.jpg"
+    },
+    {
+      "title": "cat4",
+      "image": "./catPictures/cat4.jpg"
+    },
+    {
+      "title": "cat5",
+      "image": "./catPictures/cat5.jpg"
+    },
+    {
+      "title": "cat6",
+      "image": "./catPictures/cat6.jpg"
+    },
+    {
+      "title": "cat7",
+      "image": "./catPictures/cat7.jpg"
+    },
+    {
+      "title": "cat8",
+      "image": "./catPictures/cat8.jpg"
+    },
+    {
+      "title": "cat9",
+      "image": "./catPictures/cat9.jpg"
+    },
+    {
+      "title": "cat10",
+      "image": "./catPictures/cat10.jpg"
+    },
+    {
+      "title": "cat11",
+      "image": "./catPictures/cat11.jpg"
+    },
+    {
+      "title": "cat12",
+      "image": "./catPictures/cat12.jpg"
+    },
+    {
+      "title": "cat13",
+      "image": "./catPictures/cat13.jpg"
+    },
+    {
+      "title": "cat14",
+      "image": "./catPictures/cat14.jpg"
+    },
+    {
+      "title": "cat15",
+      "image": "./catPictures/cat15.jpg"
+    },
+    {
+      "title": "cat16",
+      "image": "./catPictures/cat16.jpg"
+    },
+    {
+      "title": "cat17",
+      "image": "./catPictures/cat17.jpg"
+    },
+    {
+      "title": "cat18",
+      "image": "./catPictures/cat18.jpg"
+    },
+    {
+      "title": "cat19",
+      "image": "./catPictures/cat19.jpg"
+    },
+    {
+      "title": "cat20",
+      "image": "./catPictures/cat20.jpg"
+    },
+    {
+      "title": "cat21",
+      "image": "./catPictures/cat21.jpg"
+    },
+    {
+      "title": "cat22",
+      "image": "./catPictures/cat22.jpg"
+    },
+    {
+      "title": "cat23",
+      "image": "./catPictures/cat23.jpg"
+    },
+    {
+      "title": "cat24",
+      "image": "./catPictures/cat24.jpg"
+    },
+    {
+      "title": "cat25",
+      "image": "./catPictures/cat25.jpg"
+    },
+    {
+      "title": "cat26",
+      "image": "./catPictures/cat26.jpg"
+    },
+    {
+      "title": "cat27",
+      "image": "./catPictures/cat27.jpg"
+    },
+    {
+      "title": "cat28",
+      "image": "./catPictures/cat28.jpg"
+    },
+    {
+      "title": "cat29",
+      "image": "./catPictures/cat29.jpg"
+    },
+    {
+      "title": "cat30",
+      "image": "./catPictures/cat30.jpg"
+    },
+    {
+      "title": "cat31",
+      "image": "./catPictures/cat31.jpg"
+    },
+    {
+      "title": "cat32",
+      "image": "./catPictures/cat32.jpg"
+    },
+    {
+      "title": "cat33",
+      "image": "./catPictures/cat33.jpg"
+    },
+    {
+      "title": "cat34",
+      "image": "./catPictures/cat34.jpg"
+    },
+    {
+      "title": "cat35",
+      "image": "./catPictures/cat35.jpg"
+    },
+    {
+      "title": "cat36",
+      "image": "./catPictures/cat36.jpg"
+    },
+    {
+      "title": "cat37",
+      "image": "./catPictures/cat37.jpg"
+    },
+    {
+      "title": "cat38",
+      "image": "./catPictures/cat38.jpg"
+    },
+    {
+      "title": "cat39",
+      "image": "./catPictures/cat39.jpg"
+    },
+    {
+      "title": "cat40",
+      "image": "./catPictures/cat40.jpg"
+    },
+    {
+      "title": "cat41",
+      "image": "./catPictures/cat41.jpg"
+    },
+    {
+      "title": "cat42",
+      "image": "./catPictures/cat42.jpg"
+    },
+    {
+      "title": "cat43",
+      "image": "./catPictures/cat43.jpg"
+    },
+    {
+      "title": "cat44",
+      "image": "./catPictures/cat44.jpg"
+    },
+    {
+      "title": "cat45",
+      "image": "./catPictures/cat45.jpg"
+    },
+    {
+      "title": "cat46",
+      "image": "./catPictures/cat46.jpg"
+    },
+    {
+      "title": "cat47",
+      "image": "./catPictures/cat47.jpg"
+    },
+    {
+      "title": "cat48",
+      "image": "./catPictures/cat48.jpg"
+    },
+    {
+      "title": "cat49",
+      "image": "./catPictures/cat49.jpg"
+    },
+    {
+      "title": "cat50",
+      "image": "./catPictures/cat50.jpg"
+    },
+    {
+      "title": "cat51",
+      "image": "./catPictures/cat51.jpg"
+    },
+    {
+      "title": "cat52",
+      "image": "./catPictures/cat52.jpg"
+    },
+    {
+      "title": "cat53",
+      "image": "./catPictures/cat53.jpg"
+    },
+    {
+      "title": "cat54",
+      "image": "./catPictures/cat54.jpg"
+    },
+    {
+      "title": "cat55",
+      "image": "./catPictures/cat55.jpg"
+    },
+    {
+      "title": "cat56",
+      "image": "./catPictures/cat56.jpg"
+    },
+    {
+      "title": "cat57",
+      "image": "./catPictures/cat57.jpg"
+    },
+    {
+      "title": "cat58",
+      "image": "./catPictures/cat58.jpg"
+    },
+    {
+      "title": "cat59",
+      "image": "./catPictures/cat59.jpg"
+    },
+    {
+      "title": "cat60",
+      "image": "./catPictures/cat60.jpg"
+    },
+    {
+      "title": "cat61",
+      "image": "./catPictures/cat61.jpg"
+    },
+    {
+      "title": "cat62",
+      "image": "./catPictures/cat62.jpg"
+    },
+    {
+      "title": "cat63",
+      "image": "./catPictures/cat63.jpg"
+    },
+    {
+      "title": "cat64",
+      "image": "./catPictures/cat64.jpg"
+    },
+    {
+      "title": "cat65",
+      "image": "./catPictures/cat65.jpg"
+    },
+    {
+      "title": "cat66",
+      "image": "./catPictures/cat66.jpg"
+    },
+    {
+      "title": "cat67",
+      "image": "./catPictures/cat67.jpg"
+    },
+    {
+      "title": "cat68",
+      "image": "./catPictures/cat68.jpg"
+    },
+    {
+      "title": "cat69",
+      "image": "./catPictures/cat69.jpg"
+    },
+    {
+      "title": "cat70",
+      "image": "./catPictures/cat70.jpg"
+    },
+    {
+      "title": "cat71",
+      "image": "./catPictures/cat71.jpg"
+    },
+    {
+      "title": "cat72",
+      "image": "./catPictures/cat72.jpg"
+    },
+    {
+      "title": "cat73",
+      "image": "./catPictures/cat73.jpg"
+    },
+    {
+      "title": "cat74",
+      "image": "./catPictures/cat74.jpg"
+    },
+    {
+      "title": "cat75",
+      "image": "./catPictures/cat75.jpg"
+    },
+    {
+      "title": "cat76",
+      "image": "./catPictures/cat76.jpg"
+    },
+    {
+      "title": "cat77",
+      "image": "./catPictures/cat77.jpg"
+    },
+    {
+      "title": "cat78",
+      "image": "./catPictures/cat78.jpg"
+    },
+    {
+      "title": "cat79",
+      "image": "./catPictures/cat79.jpg"
+    },
+    {
+      "title": "cat80",
+      "image": "./catPictures/cat80.jpg"
+    },
+    {
+      "title": "cat81",
+      "image": "./catPictures/cat81.jpg"
+    },
+    {
+      "title": "cat82",
+      "image": "./catPictures/cat82.jpg"
+    },
+    {
+      "title": "cat83",
+      "image": "./catPictures/cat83.jpg"
+    },
+    {
+      "title": "cat84",
+      "image": "./catPictures/cat84.jpg"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { rec, cats, catsNose, modifySize,nrCats } from './catsData.js';
-
+import {loadCats,changeCatImage} from './gallery.js'
 
 class InsideRec{
     constructor(x1,x2,y1,y2){
@@ -18,7 +18,6 @@ class pair{
     }
 }
 
-const catImg=document.getElementById("catimage");
 const recta =document.getElementById("rec");
 const boopAr = new rec();
 boopAr.constructor2(recta.getBoundingClientRect());
@@ -143,15 +142,6 @@ function setUpImg(){
         }
     }
 }
-function getCatImage(idx){
-    return `catPictures/cat${idx}.jpg`;
-}
-function changeCatImage(idx){
-    console.log(idx);       
-    catImg.src = getCatImage(idx);
-    console.log(getCatImage(idx));
-}
-
 function getRandomNumber(maxVal){
     return Math.floor(Math.random() * maxVal); 
 }
@@ -199,5 +189,7 @@ document.addEventListener('click', function(e){
 resizeRec();
 constructGrid();
 setUpImg();
+await loadCats();
+
 console.log(boopAr.w);
 console.log(boopAr.h);
