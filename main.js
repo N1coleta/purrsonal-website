@@ -26,8 +26,8 @@ const height=boopAr.y2-boopAr.y1+1;
 let sizeCollum;
 let sizeRow;
 
-let nrRows=12;
-let nrCollums=12;
+let nrRows=20;
+let nrCollums=14;
 const myRec = new InsideRec(0, 0, 0, 0);
 const grid=myRec.matrix();
 
@@ -148,38 +148,24 @@ function getRandomNumber(maxVal){
 }
 function getOtherImgIdx(clicked){
     let maxImg=grid[clicked.f][clicked.s].images.length;
-    if(maxImg==1 && grid[clicked.f][clicked.s].images[0]==imgActive){
-        console.log("ERR 1");
-        return -1;
-    }
-    if(maxImg==0){
-        console.log("ERR 0");
-        return -1;
-    }
-    else{
         
-        let nr=getRandomNumber(maxImg); 
-        while(grid[clicked.f][clicked.s].images[nr]==imgActive){
-            console.log("miau");
-            nr=getRandomNumber(maxImg); //sper sa nu dea crash lol
-        }
-        return grid[clicked.f][clicked.s].images[nr];
+    let nr=getRandomNumber(maxImg); 
+    while(grid[clicked.f][clicked.s].images[nr]==imgActive){
+        console.log("miau");
+        nr=getRandomNumber(maxImg); //sper sa nu dea crash lol
     }
+    return grid[clicked.f][clicked.s].images[nr];
 }
 
 document.addEventListener('click', function(e){
     let cursorX = e.clientX;
     let cursorY = e.clientY;
-    console.log("clicked"); 
     if(insideRectangle(cursorX,cursorY)){
         cursorX-=boopAr.x1;
         cursorY-=boopAr.y1;
-        console.log("inside rectangle");
         let crt=getRandomColor();
         recta.style.setProperty("--bg-color",crt);
         let poz=findGridPos(cursorX,cursorY);
-        console.log(poz.f+" "+poz.s);
-        console.log(nrCollums);
         let newImg=getOtherImgIdx(poz);
         if(newImg!=-1){
             imgActive=newImg;
@@ -191,6 +177,3 @@ resizeRec();
 constructGrid();
 setUpImg();
 await loadCats();
-
-console.log(boopAr.w);
-console.log(boopAr.h);

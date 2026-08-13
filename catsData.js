@@ -34,7 +34,7 @@ export class rec {
     }
 }
 
-export const nrCats = 87;
+export const nrCats = 101;
 export const cats=[new rec(1600,1170),new rec(1500,1367),new rec(1587,1206),new rec(1600,1200),new rec(1500,867)//0-4
     ,new rec(1386,1104),new rec(1877,1326),new rec(1021,973),new rec(1023,761),new rec(708,662)//5-9
     ,new rec(870,753),new rec(1689,1131),new rec(1200,900),new rec(1537,967),new rec(1200,676)//9-14
@@ -52,7 +52,10 @@ export const cats=[new rec(1600,1170),new rec(1500,1367),new rec(1587,1206),new 
     ,new rec(1308,736),new rec(1072,896),new rec(1200,643),new rec(1200,643),new rec(1072,896)//70-74
     ,new rec(1308,736),new rec(896,550),new rec(694,640),new rec(824,808),new rec(649,573)//75-79
     ,new rec(881,491),new rec(1079,1295),new rec(1136,640),new rec(1308,736),new rec(972,634)//80-84
-    ,new rec(869 , 720),new rec(736 , 414)//85-86
+    ,new rec(869,720),new rec(736,414),new rec(869,498),new rec(1112,615),new rec(1024,525)//85-89
+    ,new rec(495,251),new rec(1208,586),new rec(1142,495),new rec(869,498),new rec(1232,707)//90-94
+    ,new rec(955,847),new rec(763,652),new rec(562,436),new rec(1159,669),new rec(1015,1071)//95-99
+    ,new rec(619,468)//100
 ] ;//dimensiunile imaginilor in px
 export const catsNose=[new rec(752,276,178,156),new rec(1019,966,197,188),new rec(859,524,163,193),new rec(628,971,142,182),new rec(859,228,183,215)
     ,new rec(671,337,216,194),new rec(923,423,214,202),new rec(305,490,156,190),new rec(249,0,198,160),new rec(324,331,103,38)
@@ -71,7 +74,10 @@ export const catsNose=[new rec(752,276,178,156),new rec(1019,966,197,188),new re
     ,new rec(825,241,104,145),new rec(872,280,150,201),new rec(961,428,65,120),new rec(165,99,70,124),new rec(905,272,129,253)
     ,new rec(831,236,114,146),new rec(331,88,319,216),new rec(344,284,243,157),new rec(0,445,480,363),new rec(166,341,278,226)
     ,new rec(352,146,283,188),new rec(448,327,297,175),new rec(408,69,217,221),new rec(657,481,151,77),new rec(821,456,151,178)
-    ,new rec(495, 0,374 , 222 ),new rec(436, 0,300,126)
+    ,new rec(495,0,374,222),new rec(436,0,300,126),new rec(157,0,84,41),new rec(541,75,91,45),new rec(285,0,159,85)
+    ,new rec(134,0,55,35),new rec(361,0,140,91),new rec(428,0,116,44),new rec(157,0,84,41),new rec(0,219,227,305)
+    ,new rec(792,415,163,218),new rec(0,288,122,214),new rec(0,233,49,149),new rec(477,274,96,53),new rec(871,407,144,184)
+    ,new rec(273,325,37,20)//100
 ] ;//astea sunt fata de sus
 export function modifySize(){
     for(let i=0; i<nrCats; ++i){
