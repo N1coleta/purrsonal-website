@@ -194,10 +194,8 @@ await loadCats();
 //from internet
 document.querySelector(".option-left")?.addEventListener("click", (e) => {
   e.stopPropagation(); 
-  console.log("Left option clicked!");
 });
 
 document.querySelector(".option-right")?.addEventListener("click", (e) => {
   e.stopPropagation(); 
-  console.log("Right option clicked!");
 });
