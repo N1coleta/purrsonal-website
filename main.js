@@ -1,6 +1,6 @@
 import { rec, cats, catsNose, modifySize,nrCats } from './catsData.js';
 import {loadCats,changeCatImage} from './gallery.js'
-
+import { meows ,playMeow,nrMeows} from './audio.js';
 class InsideRec{
     constructor(x1,x2,y1,y2){
         this.coords=new rec(x1,y1,x2-x1+1,y2-y1+1);
@@ -163,6 +163,7 @@ document.addEventListener('click', function(e){
     let cursorX = e.clientX;
     let cursorY = e.clientY;
     if(insideRectangle(cursorX,cursorY)){
+        playMeow(getRandomNumber(nrMeows));
         cursorX-=boopAr.x1;
         cursorY-=boopAr.y1;
         let crt=getRandomColor();
