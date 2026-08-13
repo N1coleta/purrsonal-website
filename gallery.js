@@ -9,11 +9,10 @@ export async function loadCats() {
 }
 
 export function getCatImage(idx) {
+  //console.log(idx);
   return catPics[idx].image; 
 }
 
 export function changeCatImage(idx) {
-  console.log(idx);
   catImg.src = getCatImage(idx);
-  console.log(getCatImage(idx));
 }

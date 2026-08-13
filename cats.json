@@ -375,6 +375,34 @@
     {
       "title": "cat93",
       "image": "./catPictures/cat93.jpg"
+    },
+    {
+      "title": "cat94",
+      "image": "./catPictures/cat94.jpg"
+    },
+    {
+      "title": "cat95",
+      "image": "./catPictures/cat95.jpg"
+    },
+    {
+      "title": "cat96",
+      "image": "./catPictures/cat96.jpg"
+    },
+    {
+      "title": "cat97",
+      "image": "./catPictures/cat97.jpg"
+    },
+    {
+      "title": "cat98",
+      "image": "./catPictures/cat98.jpg"
+    },
+    {
+      "title": "cat99",
+      "image": "./catPictures/cat99.jpg"
+    },
+    {
+      "title": "cat100",
+      "image": "./catPictures/cat100.jpg"
     }
   ]
 }

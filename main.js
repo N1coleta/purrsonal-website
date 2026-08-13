@@ -148,7 +148,9 @@ function getRandomNumber(maxVal){
 }
 function getOtherImgIdx(clicked){
     let maxImg=grid[clicked.f][clicked.s].images.length;
-        
+    if(maxImg==1 || maxImg==0){
+        return -1;
+    }
     let nr=getRandomNumber(maxImg); 
     while(grid[clicked.f][clicked.s].images[nr]==imgActive){
         console.log("miau");
