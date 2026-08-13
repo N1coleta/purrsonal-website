@@ -58,7 +58,7 @@ html, body {
 }
 #StarWars{
     font-family: 'Star Wars', sans-serif;
-    font-size: 2.9vh;
+    font-size: 2.8vh;
     color: white;
 }
 
@@ -142,4 +142,72 @@ html, body {
 
 @keyframes blink-caret {
   from, to { border-color: transparent; }
+}
+/*more code from the internet*/
+button.expand {
+  --button-height: 48px;
+  overflow: hidden;
+  outline: none;
+  background-color: #1f2024;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border: none;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  position: relative;
+  transition: padding 0.3s;
+}
+
+.expand-icon {
+  --icon-size: 14px;
+  position: absolute;
+  top: 0;
+  height: var(--button-height);
+  width: var(--button-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.2s;
+}
+
+.expand-icon > svg {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  transition: transform 0.2s;
+}
+
+.expand-icon:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.expand-icon:hover > svg {
+  transform: scale(1.2);
+}
+
+.expand-icon.option-left {
+  left: 0;
+  border-right: 1px solid #eee;
+  transform: translateX(calc(-1 * var(--button-height) - 1px));
+}
+
+.expand-icon.option-right {
+  right: 0;
+  border-left: 1px solid #eee;
+  transform: translateX(calc(var(--button-height) + 1px));
+}
+
+button.expand:hover,
+button.expand.loading {
+  padding-left: calc(25px + var(--button-height));
+  padding-right: calc(25px + var(--button-height));
+}
+
+button.expand:hover .expand-icon.option-left,
+button.expand.loading .expand-icon.option-left,
+button.expand:hover .expand-icon.option-right,
+button.expand.loading .expand-icon.option-right {
+  transform: translateX(0);
+  transition: transform 0.3s 0.05s;
 }
