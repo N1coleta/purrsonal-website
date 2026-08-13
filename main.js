@@ -106,12 +106,12 @@ function resizeRec(){
         let heightRatio=height/cats[i].h;    
         let lenghtRatio=width/cats[i].w;
         catsNose[i].x1=catsNose[i].x1*lenghtRatio;
-        catsNose[i].x2=catsNose[i].x2*lenghtRatio;
         catsNose[i].w=catsNose[i].w*lenghtRatio;
+        catsNose[i].x2 = catsNose[i].x1 + catsNose[i].w;
 
         catsNose[i].y1=catsNose[i].y1*heightRatio;
-        catsNose[i].y2=catsNose[i].y2*heightRatio;
         catsNose[i].h=catsNose[i].h*heightRatio;
+        catsNose[i].y2 = catsNose[i].y1 + catsNose[i].h;
     }
 }
 function findGridPos(x,y){
@@ -133,11 +133,12 @@ function setUpImg(){
         let endSquare=findGridPos(catsNose[i].x2,catsNose[i].y2);
         addImg(startSquare.f, endSquare.f, startSquare.s, endSquare.s, i);
     }
-    console.log("variables that have a square in them")
     for(let i=0;i<nrRows;++i){
         for(let j=0;j<nrCollums;++j){
-            if(grid[i][j].images.length>0){
-                console.log(i+" "+j);
+            if(grid[i][j].images.length<2){
+                console.log("not enough pictures");
+                console.log(i);
+                console.log(j);
             }
         }
     }

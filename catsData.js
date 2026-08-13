@@ -34,24 +34,25 @@ export class rec {
     }
 }
 
-export const nrCats = 85;
-export const cats=[new rec(1600,1170),new rec(1500,1367),new rec(1587,1206),new rec(1600,1200),new rec(1500,867)
-    ,new rec(1386,1104),new rec(1877,1326),new rec(1021,973),new rec(1023,761),new rec(708,662)
-    ,new rec(870,753),new rec(1689,1131),new rec(1200,900),new rec(1537,967),new rec(1200,676)
-    ,new rec(1869,1270),new rec(981,736),new rec(912,736),new rec(413,378),new rec(734,406)
-    ,new rec(736,414),new rec(2136,1265),new rec(1200,800),new rec(736,736),new rec(965,731)
-    ,new rec(736,552),new rec(1040,803),new rec(1423,831),new rec(1046,808),new rec(1200,1188)
-    ,new rec(1019,927),new rec(3742,2490),new rec(3151,2160),new rec(5120,2160),new rec(1920,925)
-    ,new rec(1368,979),new rec(864,712),new rec(1251,879),new rec(697,638),new rec(652,598)
-    ,new rec(673,653),new rec(847,655),new rec(736,552),new rec(1151,784),new rec(1084,833)
-    ,new rec(670,676),new rec(714,638),new rec(754,622),new rec(671,436),new rec(747,564)
-    ,new rec(943,690),new rec(849,562),new rec(796,735),new rec(1250,811),new rec(554,554)
-    ,new rec(659,623),new rec(972,759),new rec(933,865),new rec(736,552),new rec(736,552)
-    ,new rec(2057,1410),new rec(827,643),new rec(1110,855),new rec(1082,959),new rec(1188,1039)
-    ,new rec(1205,1246),new rec(640,553),new rec(1165,737),new rec(1136,640),new rec(1308,736)
-    ,new rec(1308,736),new rec(1072,896),new rec(1200,643),new rec(1200,643),new rec(1072,896)
-    ,new rec(1308,736),new rec(896,550),new rec(694,640),new rec(824,808),new rec(649,573)
-    ,new rec(881,491),new rec(1079,1295),new rec(1136,640),new rec(1308,736),new rec(972,634)
+export const nrCats = 87;
+export const cats=[new rec(1600,1170),new rec(1500,1367),new rec(1587,1206),new rec(1600,1200),new rec(1500,867)//0-4
+    ,new rec(1386,1104),new rec(1877,1326),new rec(1021,973),new rec(1023,761),new rec(708,662)//5-9
+    ,new rec(870,753),new rec(1689,1131),new rec(1200,900),new rec(1537,967),new rec(1200,676)//9-14
+    ,new rec(1869,1270),new rec(981,736),new rec(912,736),new rec(413,378),new rec(734,406)//15-19
+    ,new rec(736,414),new rec(2136,1265),new rec(1200,800),new rec(736,736),new rec(965,731)//20-24
+    ,new rec(736,552),new rec(1040,803),new rec(1423,831),new rec(1046,808),new rec(1200,1188)//25-29
+    ,new rec(1019,927),new rec(3742,2490),new rec(3151,2160),new rec(5120,2160),new rec(1920,925)//30-34
+    ,new rec(1368,979),new rec(864,712),new rec(1251,879),new rec(697,638),new rec(652,598)//35-39
+    ,new rec(673,653),new rec(847,655),new rec(736,552),new rec(1151,784),new rec(1084,833)//40-44
+    ,new rec(670,676),new rec(714,638),new rec(754,622),new rec(671,436),new rec(747,564)//45-49
+    ,new rec(943,690),new rec(849,562),new rec(796,735),new rec(1250,811),new rec(554,554)//50-54
+    ,new rec(659,623),new rec(972,759),new rec(933,865),new rec(736,552),new rec(736,552)//55-59
+    ,new rec(2057,1410),new rec(827,643),new rec(1110,855),new rec(1082,959),new rec(1188,1039)//60-64
+    ,new rec(1205,1246),new rec(640,553),new rec(1165,737),new rec(1136,640),new rec(1308,736)//65-69
+    ,new rec(1308,736),new rec(1072,896),new rec(1200,643),new rec(1200,643),new rec(1072,896)//70-74
+    ,new rec(1308,736),new rec(896,550),new rec(694,640),new rec(824,808),new rec(649,573)//75-79
+    ,new rec(881,491),new rec(1079,1295),new rec(1136,640),new rec(1308,736),new rec(972,634)//80-84
+    ,new rec(869 , 720),new rec(736 , 414)//85-86
 ] ;//dimensiunile imaginilor in px
 export const catsNose=[new rec(752,276,178,156),new rec(1019,966,197,188),new rec(859,524,163,193),new rec(628,971,142,182),new rec(859,228,183,215)
     ,new rec(671,337,216,194),new rec(923,423,214,202),new rec(305,490,156,190),new rec(249,0,198,160),new rec(324,331,103,38)
@@ -70,6 +71,7 @@ export const catsNose=[new rec(752,276,178,156),new rec(1019,966,197,188),new re
     ,new rec(825,241,104,145),new rec(872,280,150,201),new rec(961,428,65,120),new rec(165,99,70,124),new rec(905,272,129,253)
     ,new rec(831,236,114,146),new rec(331,88,319,216),new rec(344,284,243,157),new rec(0,445,480,363),new rec(166,341,278,226)
     ,new rec(352,146,283,188),new rec(448,327,297,175),new rec(408,69,217,221),new rec(657,481,151,77),new rec(821,456,151,178)
+    ,new rec(495, 0,374 , 222 ),new rec(436, 0,300,126)
 ] ;//astea sunt fata de sus
 export function modifySize(){
     for(let i=0; i<nrCats; ++i){

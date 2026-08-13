@@ -339,6 +339,14 @@
     {
       "title": "cat84",
       "image": "./catPictures/cat84.jpg"
+    },
+    {
+      "title": "cat85",
+      "image": "./catPictures/cat85.jpg"
+    },
+    {
+      "title": "cat86",
+      "image": "./catPictures/cat86.jpg"
     }
   ]
 }
