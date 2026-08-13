@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+.chango-regular {
+  font-family: "Chango", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+#catAsci{
+  color: aliceblue;
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 3vh;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw; 
+}
+.rectangle {
+    width: 40vw;
+    height: 40vh;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.text {
+    width: 40vw;
+    /* Allow the height to adjust naturally to contents */
+    min-height: 40vh; 
+    margin-bottom: -15vh;
+
+    /* Flexbox setup */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Keeps everything horizontally centered */
+    justify-content: center;/* Vertically centers contents inside */
+    text-align: center;
+    
+    position: relative;
+}
+#StarWars{
+    font-family: 'Star Wars', sans-serif;
+    font-size: 2.8vh;
+    color: white;
+}
+
+#title{
+  font-family: "Chango", sans-serif;
+  color: #7b6fb4  ;
+  font-size:3vw;
+}
+.rectangle:hover {
+  filter: drop-shadow(0 10px 22px rgba(186, 85, 211, 0.6)); /* Purple glow */
+}
+#gallery{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+#info{
+  font-size: 1.2vw;
+  color:#b4befe
+}
+#CNITV{
+  color:#b4befe;
+  text-decoration: none;
+}
+#CNITV:hover{
+  color: #a6e3a1;
+  text-decoration: none;
+}
+#pain{
+  color:#f38ba8
+}
+#opportunity{
+
+}
+/* --- TYPING CONTAINER --- stolen from the internet*/
+
+.typing-container {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  margin: 0;
+  color: white;
+  font-family: monospace;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.line-1, .line-2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: .15em solid #cba6f7;
+}
+
+.line-1 {
+  animation: 
+    typing-1 1.5s steps(9) forwards,
+    blink-caret .7s step-end infinite;
+}
+
+.line-2 {
+  display: block;
+  animation: 
+    typing-2 2.5s steps(24) 1.5s forwards,
+    blink-caret .7s step-end infinite;
+}
+
+@keyframes typing-1 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing-2 {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+}
+/*more code from the internet*/
+button.expand {
+  --button-height: 7.5vh; /* Increased from 48px to fit the larger button */
+  overflow: hidden;
+  outline: none;
+  background-color: #473152;
+  border-radius: 12px;
+  
+  padding: 2vh 4vh; 
+  font-size: 3.5rem; 
+  
+  border: none;
+  color: #b7bdf8;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  position: relative;
+  transition: padding 0.3s ease, transform 0.3s ease;
+  
+  margin-top: 4vh; 
+  left:50%
+}
+.expand-icon {
+  --icon-size: 4vh;
+  position: absolute;
+  top: 0;
+  height: var(--button-height);
+  width: var(--button-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, background-color 0.2s;
+}
+
+.expand-icon > svg {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  transition: transform 0.2s;
+}
+
+.expand-icon:hover {
+  background-color: #7e5792;
+}
+
+.expand-icon:hover > svg {
+  transform: scale(1.2);
+}
+
+.expand-icon.option-left {
+  left: 0;
+  border-right: 1px solid #838383;
+  transform: translateX(calc(-1 * var(--button-height) - 1px));
+}
+
+.expand-icon.option-right {
+  right: 0;
+  border-left: 1px solid #838383;
+  transform: translateX(calc(var(--button-height) + 1px));
+}
+
+button.expand:hover,
+button.expand.loading {
+  padding-left: calc(25px + var(--button-height));
+  padding-right: calc(25px + var(--button-height));
+}
+
+button.expand:hover .expand-icon.option-left,
+button.expand:hover .expand-icon.option-right {
+  transform: translateX(0);
+  transition: transform 0.3s 0.05s;
+}
