@@ -1,6 +1,7 @@
 import { rec, cats, catsNose, modifySize,nrCats } from './catsData.js';
 import {loadCats,changeCatImage} from './gallery.js'
 import { meows ,playMeow,nrMeows} from './audio.js';
+
 class InsideRec{
     constructor(x1,x2,y1,y2){
         this.coords=new rec(x1,y1,x2-x1+1,y2-y1+1);
@@ -192,10 +193,20 @@ await loadCats();
 
 
 //from internet
-document.querySelector(".option-left")?.addEventListener("click", (e) => {
+const leftButton = document.querySelector('.option-left');
+const rightButton = document.querySelector('.option-right');
+leftButton.addEventListener("click", (e) => {
+
   e.stopPropagation(); 
 });
 
-document.querySelector(".option-right")?.addEventListener("click", (e) => {
+rightButton?.addEventListener("click", (e) => {
   e.stopPropagation(); 
 });
+leftButton.addEventListener('click', function(e){
+    window.location.href="https://mihail-sebiastian.github.io/";
+});
+rightButton.addEventListener('click', function(e){
+    window.location.href="https://www.razv.xyz/";
+});
+
