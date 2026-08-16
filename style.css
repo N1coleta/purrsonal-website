@@ -199,9 +199,10 @@ html, body {
 }
 /*more code from the internet*/
 button.expand {
- --button-height: clamp(40px, 6vh, 60px);
+  --button-height: clamp(40px, 6vh, 60px);
   min-height: var(--button-height);
   height: auto; 
+  max-width: calc(100vw - 2rem);
   overflow: hidden;
   outline: none;
   background-color: rgb(57, 47, 105);
@@ -216,10 +217,7 @@ button.expand {
   position: relative;
   left: auto;
   transform: none;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin: 5rem auto 4rem auto; 
 
   box-sizing: border-box;
   display: inline-flex;
@@ -284,4 +282,21 @@ button.expand:hover .expand-icon.option-right {
 }
 .button-text:hover {
   text-shadow: 0px 4px 12px rgb(119, 49, 212);
+}
+@media (max-width: 600px) {
+  button.expand {
+    padding: 8px 16px;
+  }
+  button.expand:hover,
+  button.expand.loading {
+    padding-left: calc(12px + var(--button-height));
+    padding-right: calc(12px + var(--button-height));
+  }
+  .button-text {
+    font-size: clamp(10px, 3.2vw, 14px); 
+    text-overflow: ellipsis;
+  }
+  .expand-icon {
+    --icon-size: 18px; 
+  }
 }
