@@ -279,7 +279,8 @@ button.expand:hover .expand-icon.option-right {
 .button-text{
   font-size: clamp(12px, 2.2vh, 18px);
   font-family: "Bitcount Single", system-ui;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
 }
 .button-text:hover {
   text-shadow: 0px 4px 12px rgb(119, 49, 212);
