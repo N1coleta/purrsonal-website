@@ -19,14 +19,15 @@ class pair{
     }
 }
 
-const recta =document.getElementById("rec");
+let recta =document.getElementById("rec");
 const text1=document.getElementById("text1");
 const text2=document.getElementById("text2");
+const originalCatsNose = JSON.parse(JSON.stringify(catsNose));
 
-const boopAr = new rec();
+let boopAr = new rec();
 boopAr.constructor2(recta.getBoundingClientRect());
-const width=boopAr.x2-boopAr.x1+1;
-const height=boopAr.y2-boopAr.y1+1;
+let width=boopAr.x2-boopAr.x1+1;
+let height=boopAr.y2-boopAr.y1+1;
 let sizeCollum;
 let sizeRow;
 
@@ -36,7 +37,6 @@ const myRec = new InsideRec(0, 0, 0, 0);
 const grid=myRec.matrix();
 
 let imgActive=1;//the index of the image that is currently being displayed on the screen
-
 
 
 function insideRectangle(x,y){
@@ -104,17 +104,16 @@ function constructGrid(){
     }
 }
 function resizeRec(){
-
     for(let i=0;i<nrCats;++i){
         //resize la imagine si trebuie sa dam resize si la dreptunghiuri
         let heightRatio=height/cats[i].h;    
         let lenghtRatio=width/cats[i].w;
-        catsNose[i].x1=catsNose[i].x1*lenghtRatio;
-        catsNose[i].w=catsNose[i].w*lenghtRatio;
+        catsNose[i].x1 = originalCatsNose[i].x1 * lenghtRatio;
+        catsNose[i].w  = originalCatsNose[i].w * lenghtRatio;
         catsNose[i].x2 = catsNose[i].x1 + catsNose[i].w;
 
-        catsNose[i].y1=catsNose[i].y1*heightRatio;
-        catsNose[i].h=catsNose[i].h*heightRatio;
+        catsNose[i].y1 = originalCatsNose[i].y1 * heightRatio;
+        catsNose[i].h  = originalCatsNose[i].h * heightRatio;
         catsNose[i].y2 = catsNose[i].y1 + catsNose[i].h;
     }
 }
@@ -186,12 +185,13 @@ document.addEventListener('click', function(e){
         }
     }
 });
-resizeRec();
-constructGrid();
-setUpImg();
-await loadCats();
-
-
+async function setUpRectangle(){ 
+    resizeRec();
+    constructGrid();
+    resizeGrid(nrRows,nrCollums);
+    setUpImg();
+    await loadCats();
+}
 //from internet
 const leftButton = document.querySelector('.option-left');
 const rightButton = document.querySelector('.option-right');
@@ -209,4 +209,14 @@ leftButton.addEventListener('click', function(e){
 rightButton.addEventListener('click', function(e){
     window.location.href="https://www.razv.xyz/";
 });
+let previousScale = window.visualViewport.scale;
 
+window.visualViewport.addEventListener('resize', () => {
+    let currentScale = window.visualViewport.scale;
+    recta =document.getElementById("rec");
+    boopAr.constructor2(recta.getBoundingClientRect());
+    width=boopAr.x2-boopAr.x1+1;
+    height=boopAr.y2-boopAr.y1+1;
+    setUpRectangle();
+    previousScale = currentScale;
+});

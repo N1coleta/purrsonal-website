@@ -64,7 +64,8 @@ html, body {
 #catAsci{
   color: #a5adcb;
   font-family:Arial, Helvetica, sans-serif ;
-  font-size: 3vh;
+  font-size: 2rem;
+  margin-bottom: 7rem;
 }
 .container {
   width: 100%;
@@ -202,11 +203,11 @@ button.expand {
   --button-height: clamp(40px, 6vh, 60px);
   min-height: var(--button-height);
   height: auto; 
-  max-width: calc(100vw - 2rem);
+  max-width: calc(100vw - 4rem);
   overflow: hidden;
   outline: none;
   background-color: rgb(57, 47, 105);
-  border-radius: 1.2vh;
+  border-radius: 8px;
   
   padding: clamp(8px, 1.5vh, 14px) clamp(16px, 3vh, 32px);
   border: none;
