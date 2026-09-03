@@ -210,8 +210,8 @@ rightButton.addEventListener('click', function(e){
     window.location.href="https://www.razv.xyz/";
 });
 let previousScale = window.visualViewport.scale;
-
-window.visualViewport.addEventListener('resize', () => {
+setUpRectangle();
+window.visualViewport.addEventListener('resize', () => {//ca sa nu dea refresh de fiecare data
     let currentScale = window.visualViewport.scale;
     recta =document.getElementById("rec");
     boopAr.constructor2(recta.getBoundingClientRect());
