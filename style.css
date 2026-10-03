@@ -7,7 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:slnt,CRSV@-8..0,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Berkshire+Swash&family=Protest+Strike&display=swap');
 
+.ballet-BalletFont {
+  font-family: "Ballet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+}
 
 @font-face {
   font-family: 'AngerisPixel';
@@ -177,7 +184,7 @@ html, body {
     color: white;
 }
 
-.container div.quote{
+.quote{
   grid-area: quote;
   min-height: 6rem;
   max-height: 12rem;
@@ -193,11 +200,9 @@ html, body {
 .quote h1{
   margin-left: 1.2rem;
   margin-right: 1.2rem;
-  font-family: Vintage;
-  font-size: 2rem;
-  color: rgb(177, 162, 208);
+  font-size: 2.5rem;
+  color: rgb(201, 197, 209);
 }
-
 .container div.title{
   margin-top: 3rem;
   grid-area: header;
@@ -268,13 +273,12 @@ html, body {
   font-size: 2vw;
   text-align: center;
 }
-
 .line-1, .line-2 {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  border-right: .1.5em solid #cba6f7;
+  border-right: .1.5em solid #cba6f7; 
 }
 
 .line-1 {
@@ -418,5 +422,52 @@ button.expand:hover .expand-icon.option-right {
   .rectangle {
     height: 15rem; 
     width: 100%; 
+  }
+}
+
+/*copy-pasted off interner*/
+.gradient-border {
+  --border-width: 4px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Remove fixed width and height so it fits your text! */
+  width: 100%;
+  box-sizing: border-box;
+  
+  font-family: Vintage;
+  color: rgb(177, 162, 208);
+  background: url('symbols/starBackround.jpg');
+  border-radius: 25px;
+  padding: 1.5rem;
+}
+
+.gradient-border::after {
+  position: absolute;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  width: calc(100% + var(--border-width) * 2);
+  height: calc(100% + var(--border-width) * 2);
+  background: linear-gradient(
+    60deg,
+  hsl(231deg, 97%, 72%),
+    hsl(269, 42%, 31%),
+    hsl(278, 18%, 18%),
+    hsl(266deg, 85%, 58%),
+    hsl(231, 37%, 21%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: 28px; /* Matches the outer border radius */
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
   }
 }
