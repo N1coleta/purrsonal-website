@@ -1,13 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P:regular);
+@import url(https://fonts.googleapis.com/css?family=Cause:100,200,300,regular,500,600,700,800,900);
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 @import url('https://fonts.cdnfonts.com/css/star-wars');
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Jersey+15&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Chango&family=Jersey+15&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:slnt,CRSV@-8..0,1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Protest+Strike&display=swap');
+
+
 @font-face {
   font-family: 'AngerisPixel';
   src: url('fonts/AngerisPixel-Regular.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Diences';
+    src: url('fonts/DiencesBlackletterFont.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Vintage';
+    src: url('fonts/VintageGoods.ttf') format('truetype');
+}
+.berkshire-swash-regular {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .chango-regular {
   font-family: "Chango", sans-serif;
   font-weight: 400;
@@ -62,46 +82,91 @@ html, body {
   font-style: normal;
 }
 #catAsci{
+  grid-area: catAscii;
   color: #a5adcb;
   font-family:Arial, Helvetica, sans-serif ;
   font-size: 2rem;
   margin-bottom: 7rem;
 }
 .container {
-  width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto auto -35rem auto auto;
+  grid-template-areas:
+    "header header"
+    "text catImgs"
+    "song quote"
+    "button button"
+    "footer footer";
+  gap:3rem 6rem;
+  /*prima dist intre randuri ,iar a doua coloane*/
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 10vh;
-  gap: 4vw;
+  align-items: start;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 5px;
+}
+.container div.catImg{
+  grid-area: catImgs;
+  display: flex;
+  width: 100%;
+}
+.container div.buttonNxt{
+  grid-area: button;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .rectangle{
-  width: 50rem;
-  height: 20rem;
+  width: 100%;
+  max-width: 80rem;
+  height: 25rem;
   position: relative;
   overflow: hidden;
   transition: filter 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  vertical-align: center;
   cursor: pointer;
   flex-shrink: 0;
-  margin-top: 5vh;
-  margin-right: 7vw;
+
+}
+.aboutMe{
+  color: #7b6fb4;
+  font-size: clamp(1.8rem, 1rem + 2vw, 1.5rem);
+  font-family: 'Press Start 2P', cursive;
 }
 .text {
-    width: 40vw;
-    min-height: 40vh; 
-    margin-bottom: -15vh;
+    grid-area: text;
+    width: 100%;
+    min-height: 12rem;
+    max-height: 25rem;
+    overflow-y: auto;
+    scrollbar-color: rgb(177, 123, 207) #45475a;
+
+
+    background-color: rgba(46, 35, 194, 0.113);
+    border-radius: 25px;
+
+    background-image: url('symbols/star.svg');
+    background-size: 20px;
+    background-repeat: round;
+
     
+    padding: 20px;
+
+    
+    border: 3px solid #0f0f18;
     font-family: 'Space Mono', monospace;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     
     position: relative;
@@ -112,13 +177,53 @@ html, body {
     color: white;
 }
 
-#title{
-  margin-top: 3vh;
+.container div.quote{
+  grid-area: quote;
+  min-height: 6rem;
+  max-height: 12rem;
+  object-fit: fill;
+  background: url('symbols/starBackround.jpg');
+  border-radius: 25px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align:center
+
+}
+.quote h1{
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  font-family: Vintage;
+  font-size: 2rem;
+  color: rgb(177, 162, 208);
+}
+
+.container div.title{
+  margin-top: 3rem;
+  grid-area: header;
+  text-align: center;
+  font-family: 'AngerisPixel', sans-serif;
+  color: #7b6fb4  ;
+  font-size: clamp(2rem, 2rem + 2vw, 5.5rem);
+}
+
+.song{
+  grid-area: song;
+  border-radius: 12px;
+  width: 100%;
+  height: 220px;
+  border: none;
+  
+}
+
+.container div.footer{
+  grid-area: footer;
+  text-align: center;
   font-family: 'AngerisPixel', sans-serif;
   color: #7b6fb4  ;
   font-size: clamp(1.8rem, 1rem + 2vw, 3.5rem);
-
 }
+
 .rectangle:hover {
   filter: drop-shadow(0 10px 22px rgb(136, 57, 239)); 
 }
@@ -135,11 +240,11 @@ html, body {
   color:#b4befe
 }
 #CNITV{
-  color:#b4befe;
+  color: #475a46;
   text-decoration: none;
 }
 #CNITV:hover{
-  color: #a6e3a1;
+  color:#a6e3a1;
   text-decoration: none;
 }
 #pain{
@@ -203,7 +308,8 @@ button.expand {
   --button-height: clamp(40px, 6vh, 60px);
   min-height: var(--button-height);
   height: auto; 
-  max-width: calc(100vw - 4rem);
+  width: auto;
+  max-width: 100%;
   overflow: hidden;
   outline: none;
   background-color: rgb(57, 47, 105);
@@ -212,13 +318,12 @@ button.expand {
   padding: clamp(8px, 1.5vh, 14px) clamp(16px, 3vh, 32px);
   border: none;
   color: #b7bdf8;
-  font-family: "hango-regular";
+  font-family: "chango-regular";
   cursor: pointer;
 
   position: relative;
-  left: auto;
   transform: none;
-  margin: 5rem auto 4rem auto; 
+  margin: 0 auto;
 
   box-sizing: border-box;
   display: inline-flex;
@@ -285,20 +390,33 @@ button.expand:hover .expand-icon.option-right {
 .button-text:hover {
   text-shadow: 0px 4px 12px rgb(119, 49, 212);
 }
-@media (max-width: 600px) {
-  button.expand {
-    padding: 8px 16px;
+@media (max-width: 1050px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 2rem;
+    overflow-x: hidden; 
   }
-  button.expand:hover,
-  button.expand.loading {
-    padding-left: calc(12px + var(--button-height));
-    padding-right: calc(12px + var(--button-height));
+  .container div.catImg,
+  .container div.buttonNxt {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
   }
-  .button-text {
-    font-size: clamp(10px, 3.2vw, 14px); 
-    text-overflow: ellipsis;
+  .text, .quote {
+    width: 100%;
+    max-height: none; 
+    box-sizing: border-box;
+    margin: 0;
   }
-  .expand-icon {
-    --icon-size: 18px; 
+  
+  .rectangle {
+    height: 15rem; 
+    width: 100%; 
   }
 }
