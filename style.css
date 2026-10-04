@@ -147,6 +147,12 @@ html, body {
   font-size: clamp(1.8rem, 1rem + 2vw, 1.5rem);
   font-family: 'Press Start 2P', cursive;
 }
+.text h1{
+  align-self: flex-start;
+  color: #7b6fb4;
+  font-size: clamp(0.6rem, 1rem + 2vw, 1.2rem);
+  font-family: 'Press Start 2P', cursive;
+}
 .text {
     grid-area: text;
     width: 100%;
@@ -183,6 +189,7 @@ html, body {
     font-size:  clamp(0.875rem, 0.75rem + 0.5vw, 1.25rem);;
     color: white;
 }
+
 
 .quote{
   grid-area: quote;
