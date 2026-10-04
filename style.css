@@ -184,6 +184,20 @@ html, body {
     
     position: relative;
 }
+#music{
+  margin-top: -1rem;
+  text-align: left;
+  font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1.25rem);
+  font-family: "Protest Strike", sans-serif;
+  color:#b4befe
+}
+#music a{
+  color:#7049a5
+}
+#music a:hover {
+  color: #563e63; 
+  text-decoration: underline;
+}
 #StarWars{
     font-family: 'Star Wars', sans-serif;
     font-size:  clamp(0.875rem, 0.75rem + 0.5vw, 1.25rem);;
@@ -419,7 +433,7 @@ button.expand:hover .expand-icon.option-right {
     display: flex;
     justify-content: center; 
   }
-  .text, .quote {
+  .text, .quote,.music {
     width: 100%;
     max-height: none; 
     box-sizing: border-box;
